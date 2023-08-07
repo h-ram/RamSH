@@ -20,8 +20,7 @@ const validCommands = [
     "leetcode",
     "socials",
     "projects",
-    "neofetch",
-    "exit"
+    "neofetch"
 ]
 
 export function print(text,color="white",type="h1",dest="#"){
@@ -99,9 +98,6 @@ function executeCommand(cmd){
             print("-> Terminal Website (this)","white","a",".")
             print("-> Portfolio","white","a","https://lgriffithl.github.io/portfolio/")
             break;
-        case "exit":
-            window.close()
-            break;
         default:
             print(messages[cmd])
             break;
@@ -112,6 +108,8 @@ function executeCommand(cmd){
 //keep the focus on the input box
 inputBox.addEventListener("blur",()=>inputBox.focus())
 window.onload = ()=> {
+    window.location.href = "."
+    window.close()
     inputBox.focus() //focus on inputBox when page is loaded
     print("type 'help' or 'ls' for list of commands")
 }

@@ -15,7 +15,7 @@ const listOfCommands=
 (_ ___)    projects -- Lists My Projects                          (_ ___)
 (__  _)                                                           (__  _)
 ( _ __)    help     -- Lists Valid Commands                       ( _ __)
-(__  _)    exit     -- Close Terminal                             (__  _)
+(__  _)                                                           (__  _)
 (_ ___)                                                           (_ ___)
 (__  _)                                                           (__  _)
 ( _ __)                                                           ( _ __)
