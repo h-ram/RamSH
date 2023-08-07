@@ -108,8 +108,6 @@ function executeCommand(cmd){
 //keep the focus on the input box
 inputBox.addEventListener("blur",()=>inputBox.focus())
 window.onload = ()=> {
-    window.location.href = "."
-    window.close()
     inputBox.focus() //focus on inputBox when page is loaded
     print("type 'help' or 'ls' for list of commands")
 }
