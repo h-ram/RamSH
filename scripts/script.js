@@ -4,6 +4,7 @@ const prompt = `${username}@Arch $ ~ `
 const inputBox = document.querySelector("input");
 const command = document.querySelector(".command")
 const history = document.querySelector(".history")
+const screen = document.querySelector("pre")
 document.querySelector(".username").textContent = prompt 
 
 const validCommands = [
@@ -15,7 +16,8 @@ const validCommands = [
     "whois",
     "date",
     "github",
-    "linkedin"
+    "linkedin",
+    "neofetch"
 ]
 
 export function print(text,color="white"){
@@ -26,7 +28,7 @@ export function print(text,color="white"){
     function lineByLine(index){
         if(index >= lines.length) return
         element.textContent += lines[index] + "\n"
-        document.documentElement.scrollTop = document.documentElement.scrollHeight; //keeps the pages scrolled all the way down
+        screen.scrollTop = screen.scrollHeight; //keeps the pages scrolled all the way down
         setTimeout(()=>{lineByLine(index+1)},80)
     }
     lineByLine(0)
@@ -44,7 +46,7 @@ function checkCommand(cmd){
         print(`Bash : ${cmd} : Command Not Found `)
 }
 function updatePrompt(){
-    document.documentElement.scrollTop = document.documentElement.scrollHeight; //keeps the pages scrolled all the way down
+    screen.scrollTop = screen.scrollHeight; //keeps the pages scrolled all the way down
     const text = inputBox.value;
     command.textContent += text 
     inputBox.value = ""
@@ -55,10 +57,10 @@ function enterCommand(event){
             command.textContent = command.textContent.slice(0,-1)
             break;
         case "Enter":
-        print(`${prompt}${command.textContent}`,"green")
+            print(`${prompt}${command.textContent}`,"green")
             checkCommand(command.textContent)
             command.textContent = ""
-            document.documentElement.scrollTop = document.documentElement.scrollHeight; //keeps the pages scrolled all the way down
+            screen.scrollTop = screen.scrollHeight; //keeps the pages scrolled all the way down
             break;
     }
 }
