@@ -9,18 +9,20 @@ date
 github
     -- Takes You To My Github
 linkedin
-    -- Takes You To My Linkedin
-long shit long shit long shit long shit long shit smash`
+    -- Takes You To My Linkedin`
+
+const date = new Date();
+const aboutMe = `FullStack Web Developer\nExpert At : 
+> React
+> NodeJs
+> Vanilla JS`
+
 export default {
     ls:listOfCommands,
     help:listOfCommands,
     list:listOfCommands,
-    about: `FullStack Web Developer\nExpert At : 
-> React
-> NodeJs
-> Vanilla JS`,
-    date: `${new Date()}`,
-    
+    about: aboutMe,
+    date: date,
 }
 
 

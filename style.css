@@ -40,12 +40,13 @@ pre{
     height:100%;
     padding:10px;
     overflow:hidden;
+    white-space: pre-wrap;
     border:2px solid red;
 }
 .history{
     width:100%;
-    background-color: tomato;
 }
+
 .history h1{
     width:100%;
     word-wrap:break-word;
@@ -53,7 +54,6 @@ pre{
 .prompt{
     display:flex;
     width:100%;
-    border:2px solid blue;
 }
 .username{
 }
