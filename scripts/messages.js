@@ -3,44 +3,26 @@ const listOfCommands=
 `.-=~=-.                                                           .-=~=-.
 (__  _)-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-(__  _)
 ( _ __)                                                           ( _ __)
-(__  _)    neofetch -- Print System Info                          (__  _)
+(__  _)    neofetch -- Prints System Info                         (__  _)
 (_ ___)    about    -- About Me                                   (_ ___)
 (__  _)    github   -- Takes You To My Github                     (__  _)
 ( _ __)    linkedin -- Takes You To My Linkedin                   ( _ __)
 (__  _)    leetcode -- Takes You To My LeetCode                   (__  _)
-(_ ___)                                                           (_ ___)
+(_ ___)    date     -- Prints Current Date                        (_ ___)
+(__  _)    clear    -- Clears Terminal                            (__  _)
+( _ __)    whois    -- Prints Current Username                    ( _ __)
+(__  _)    socials  -- Lists My Social Media Accounts             (__  _)
+(_ ___)    projects -- Lists My Projects                          (_ ___)
 (__  _)                                                           (__  _)
-( _ __)                                                           ( _ __)
-(__  _)                                                           (__  _)
-(_ ___)                                                           (_ ___)
-(__  _)                                                           (__  _)
-( _ __)                                                           ( _ __)
-(__  _)                                                           (__  _)
+( _ __)    help     -- Lists Valid Commands                       ( _ __)
+(__  _)    exit     -- Close Terminal                             (__  _)
 (_ ___)                                                           (_ ___)
 (__  _)                                                           (__  _)
 ( _ __)                                                           ( _ __)
 (__  _)                                                           (__  _)
 (__  _)                                                           (__  _)
 (_ ___)-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-(_ ___)
-\`-._.-'                                                                 \`-._.-'`
-const cmd = 
-`whois
-    -- Print Username
-about
-    -- A Litte Bit About Me
-date
-    -- Print Current Date
-github
-    -- Takes You To My Github
-linkedin
-    -- Takes You To My Linkedin
-clear
-    -- Clears Terminal
-neofetch 
-    -- Print System Information
------------------------------------------------------------------------`
-
-const date = new Date();
+\`-._.-'                                                           \`-._.-'`
 const aboutMe =
 ` ____________________________
 |  ________________________  |
@@ -55,6 +37,7 @@ const aboutMe =
 | |________________________| |
 |____________________________|`
 
+const date = new Date();
 let browserName;
 const userAgent = navigator.userAgent;
 if (userAgent.includes('Firefox')) {
