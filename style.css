@@ -38,7 +38,7 @@ body{
 
 pre{
     width:95vw;
-    height:90vh;
+    height:92vh;
     padding:10px;
     position: fixed;
     top:50%;
@@ -46,7 +46,7 @@ pre{
     transform: translate(-50%,-50%);
     overflow-x:hidden;
     white-space: pre-wrap;
-    border:2px solid red;
+    border:2px solid tomato;
 }
 h1{
     font-size:1.5rem;

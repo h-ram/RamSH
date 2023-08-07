@@ -1,5 +1,29 @@
 
-const listOfCommands = 
+const listOfCommands= 
+`.-=~=-.                                                           .-=~=-.
+(__  _)-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-(__  _)
+( _ __)                                                           ( _ __)
+(__  _)    neofetch -- Print System Info                          (__  _)
+(_ ___)    about    -- About Me                                   (_ ___)
+(__  _)    github   -- Takes You To My Github                     (__  _)
+( _ __)    linkedin -- Takes You To My Linkedin                   ( _ __)
+(__  _)    leetcode -- Takes You To My LeetCode                   (__  _)
+(_ ___)                                                           (_ ___)
+(__  _)                                                           (__  _)
+( _ __)                                                           ( _ __)
+(__  _)                                                           (__  _)
+(_ ___)                                                           (_ ___)
+(__  _)                                                           (__  _)
+( _ __)                                                           ( _ __)
+(__  _)                                                           (__  _)
+(_ ___)                                                           (_ ___)
+(__  _)                                                           (__  _)
+( _ __)                                                           ( _ __)
+(__  _)                                                           (__  _)
+(__  _)                                                           (__  _)
+(_ ___)-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-(_ ___)
+\`-._.-'                                                                 \`-._.-'`
+const cmd = 
 `whois
     -- Print Username
 about
@@ -17,10 +41,19 @@ neofetch
 -----------------------------------------------------------------------`
 
 const date = new Date();
-const aboutMe = `FullStack Web Developer\nExpert At : 
-> React
-> NodeJs
-> Vanilla JS`
+const aboutMe =
+` ____________________________
+|  ________________________  |
+| |                        | |
+| |  FullStack Developer   | |
+| |  Expert At :           | |
+| |     > NodeJs           | | 
+| |     > React            | | 
+| |     > NextJs           | | 
+| |     > Vanilla JS       | |
+| |                        | |
+| |________________________| |
+|____________________________|`
 
 let browserName;
 const userAgent = navigator.userAgent;
