@@ -17,8 +17,12 @@ const validCommands = [
     "socials",
     "projects",
     "neofetch",
-    "contact",
-    "theme"
+    "theme",
+    "art",
+    "quote",
+    "rock",
+    "paper",
+    "scissors"
 ]
 
 export function print(text,color="white",type="h1",dest="#"){
@@ -87,9 +91,6 @@ function executeCommand(cmd){
             print("-> RamOS","white","a","https://h-ram.github.io/RamOS")
             print("-> Portfolio","white","a","https://h-ram.github.io/portfolio/")
             break;
-        case "contact":
-            print("Contact Is Under Maintenance!!","red")
-            break;
         case "theme":
             changeTheme();
             break;
@@ -98,6 +99,20 @@ function executeCommand(cmd){
             break;
         case "neofetch":
             print(messages[cmd],"cyan")
+            break;
+        case "art":
+            let rng1 = Math.floor(Math.random()*messages['arts'].length)
+            print(messages[`arts`][rng1],"white","h4")
+            break;        
+        case "quote":
+            let rng2 = Math.floor(Math.random()*messages['quotes'].length)
+            print(messages['quotes'][rng2],"cyan")
+            break;
+        case "rock":
+        case "scissors":
+        case "paper":
+            let rng3 = Math.floor(Math.random()*2)
+            print(messages[cmd][rng3])
             break;
         default:
             print(messages[cmd])
@@ -116,7 +131,13 @@ function changeTheme(){
 //keep the focus on the input box
 inputBox.addEventListener("blur",()=>inputBox.focus())
 window.onload = ()=> {
-    inputBox.focus() //focus on inputBox when page is loaded
-    print(messages["aa1"],"yellow")
-    print("type 'help' or 'ls' for list of commands")
+    // wait for loading screen to finish 
+    setTimeout(()=>{
+        inputBox.focus() //focus on inputBox when page is loaded
+        print(messages["logo"],"yellow")
+        print(messages["keyboard"],"yellow","h6")
+        print("type 'help' or 'ls' for list of commands")
+    },5600)
+
 }
+
