@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 :root{
     --primary:#aaff00;
 }
@@ -25,13 +26,11 @@
     box-sizing: border-box;
     margin:0;
     padding:0;
-    font-family: monospace;
     color:white;
 }
 body{
     color:white;
     background-color: #232627;
-    padding:10px;
     height:100%;
     width:100%;
     overflow: none;
@@ -52,12 +51,15 @@ pre{
     flex-direction: column;
 }
 h1{
-    font-size:1.4vw;
+    font-size:1.6vw;
 }
 a{
     text-decoration: none;
-    font-size:1.4vw;
+    font-size:1.5vw;
+    font-weight: bold;
     display:inline;
+    font-family: "VT323",monospace;
+    letter-spacing: 2px;
 }
 a:hover{
     color:tomato;
@@ -80,8 +82,8 @@ a:hover{
 .username{
 }
 .cursor{
-    font-size:20px;
-    width:20px;
+    height:2.3vw;
+    width:1.5vw;
     border:none;
     outline: none;
     caret-color: transparent;
@@ -103,11 +105,136 @@ a:hover{
 .yellow{color:#ffd700;}
 .white{color:#fff;}
 .red{color:tomato;}
-
+.cyan{color:cyan}
 
 /*----------------------- RESPONSIVITY -------------------------------*/
 @media (max-width: 1200px) {
   h1{
-    font-size: 2.2vw; 
+    font-size:2vw; 
   }
+  a{
+    font-size: 3vw; 
+  }
+  
+}
+
+
+/*----------------------- LIGHT MODE ---------------------------------*/
+.lightMode{
+    transition-duration: 0.5s;
+}
+body.lightMode{
+    background-color: #DDE4E7;
+}
+.cursor.lightMode{
+    background-color: black;
+}
+.command.lightMode{
+    color:black;
+}
+a.lightMode:hover{
+    transition-duration: 0s;
+    background-color: tomato;
+}
+.green.lightMode{color:blue;}
+.yellow.lightMode{color:blueviolet}
+.red.lightMode{color:red;}
+.white.lightMode{color:black;}
+.cyan.lightMode{color:black}
+
+/*----------------------- LOADING SCREEN ---------------------------------*/
+.loadingScreen{
+    position:fixed;
+    height:100vh;
+    width: 100vw;
+    background-color: black;
+    z-index: 9999;
+    animation: loaded 1s 5s forwards;
+}
+.loadingScreen::after{
+    content:"";
+    color:white;
+    width:100%;
+    text-align: center;
+    font-size:4rem;
+    font-weight: bold;
+    font-family: "VT323", monospace;
+    letter-spacing: 3px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    animation: load 4s infinite forwards;
+}
+/*----------------------- ANIMATIONS ---------------------------------*/
+@keyframes load {
+    0%,100%{
+        content:"Loading ";
+        opacity: 1;
+    }
+    10%,90%{
+        content:"Loading .";
+        opacity: 0.5;
+    }
+    20%,80%{
+        content:"Loading ..";
+        opacity: 1;
+    }
+    30%,70%{
+        content:"Loading ...";
+        opacity: 0.5;
+
+    }
+    40%,60%{
+        content:"Loading ....";
+        opacity: 1;
+    }
+    50%{
+        content:"Loading ..... :)";
+        opacity: 0.5;
+    }
+}
+@keyframes loaded {
+    from{}
+    to{
+        transform: translateY(-100%);
+        display: none;
+    }
+
+}
+/*----------------------- SCREEN SIZE GUARD ---------------------------------*/
+.screenSizeGuard{
+    display: none; /* gets toggled */
+    position: fixed;
+    height:100vh;
+    width:100vw;
+    background-color: black;
+    z-index: 99999;
+}
+.screenSizeGuard::before{
+    content:"WARNING";
+    background-color: red;
+    position: absolute;
+    font-size:10vw;
+    font-family: "VT323", monospace;
+    padding:10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.screenSizeGuard::after{
+    content:"Resolution Too Small";
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size:6vw;
+    font-family: "VT323", monospace;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+@media screen and (max-width:600px) {
+    .screenSizeGuard{
+        display: block;
+    }
 }
