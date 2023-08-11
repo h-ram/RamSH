@@ -5,7 +5,9 @@ Visit [Website](https://h-ram.github.io/RamSH)
 
 
 ![website preview](./assets//README/rm_img1.PNG)
-A Light Weight Bash-Like Terminal that provides a few simple and fun commands
+
+> A Light Weight Bash-Like Terminal that provides a few simple and fun commands
+
 ![commands preview](./assets//README/rm_img2.PNG)
 ___
 * An evening's worth of coding :)
