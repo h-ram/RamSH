@@ -1,6 +1,7 @@
 
 
-### Visit [***Website***](https://h-ram.github.io/RamSH)
+### Visit **<a href="https://h-ram.github.io/RamSH" target="_blank">Website</a>**
+
 # **Web Terminal Emulator**
 
 ![website preview](./assets//README/rm_img1.PNG)
@@ -14,5 +15,5 @@ ___
     * Vanilla JS
     * HTML / CSS
 ___
-Checkout The [Website](https://h-ram.github.io/RamSH)
 
+### Checkout **<a href="https://h-ram.github.io/RamSH" target="_blank" >Website</a>**
