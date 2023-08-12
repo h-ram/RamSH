@@ -137,7 +137,7 @@ window.onload = ()=> {
         print(messages["logo"],"yellow")
         print(messages["keyboard"],"yellow","h6")
         print("type 'help' or 'ls' for list of commands")
-    },5600)
+    },5200)
 
 }
 
