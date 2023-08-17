@@ -5,7 +5,7 @@ const inputBox = document.querySelector("input");
 const command = document.querySelector(".command")
 const history = document.querySelector(".history")
 const screen = document.querySelector("pre")
-document.querySelector(".username").textContent = prompt 
+document!.querySelector(".username").textContent = prompt 
 
 const validCommands = [
     "help",
